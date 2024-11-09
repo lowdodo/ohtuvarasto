@@ -1,126 +1,25 @@
 from varasto import Varasto
 
-
 def main():
-    mehua = Varasto(100.0)
-    olutta = Varasto(100.0, 20.2)
-
-    print("Luonnin jälkeen:")
-    print(f"Mehuvarasto: {mehua}")
-    print(f"Olutvarasto: {olutta}")
-
-    print("Olut getterit:")
-    print(f"saldo = {olutta.saldo}")
-    print(f"tilavuus = {olutta.tilavuus}")
-    print(f"PALJONKOMAHTUU = {olutta.PALJONKOMAHTUU()}")
-
-    print("Mehu setterit:")
-    print("Lisätään 50.7")
+    mehua, olutta = Varasto(100.0), Varasto(100.0, 20.2)
+    print(f"Luonnin jälkeen:\nMehuvarasto: {mehua}\nOlutvarasto: {olutta}\n"
+          f"Olut getterit:\nsaldo = {olutta.saldo}\n"
+          f"tilavuus = {olutta.tilavuus}\n"
+          f"paljonko_mahtuu = {olutta.paljonko_mahtuu()}\n"
+          f"\nMehu setterit:\nLisätään 50.7")
     mehua.lisaa_varastoon(50.7)
-    print(f"Mehuvarasto: {mehua}")
-    print("Otetaan 3.14")
+    print(f"Mehuvarasto: {mehua}\nOtetaan 3.14")
     mehua.ota_varastosta(3.14)
-    print(f"Mehuvarasto: {mehua}")
-
-    print("Virhetilanteita:")
-    print("Varasto(-100.0);")
-    huono = Varasto(-100.0)
-    print(huono)
-
-    print("Varasto(100.0, -50.7)")
-    huono = Varasto(100.0, -50.7)
-    print(huono)
-
-    print(f"Olutvarasto: {olutta}")
-    print("olutta.lisaa_varastoon(1000.0)")
+    print(f"Mehuvarasto: {mehua}\n\nVirhetilanteita:\nVarasto(-100.0);")
+    print(f"{Varasto(-100.0)}\nVarasto(100.0, -50.7)\n{Varasto(100.0, -50.7)}")
     olutta.lisaa_varastoon(1000.0)
-    print(f"Olutvarasto: {olutta}")
-
-    print(f"Mehuvarasto: {mehua}")
-    print("mehua.lisaa_varastoon(-666.0)")
+    print(f"\nOlutvarasto: {olutta}\nmehua.lisaa_varastoon(-666.0)")
     mehua.lisaa_varastoon(-666.0)
-    print(f"Mehuvarasto: {mehua}")
-
-    print(f"Olutvarasto: {olutta}")
-    print("olutta.ota_varastosta(1000.0)")
     saatiin = olutta.ota_varastosta(1000.0)
-    print(f"saatiin {saatiin}")
-    print(f"Olutvarasto: {olutta}")
-
-    print(f"Mehuvarasto: {mehua}")
-    print("mehua.otaVarastosta(-32.9)")
+    print(f"Mehuvarasto: {mehua}\nolutta.ota_varastosta(1000.0)\n"
+          f"saatiin {saatiin}\nOlutvarasto: {olutta}")
     saatiin = mehua.ota_varastosta(-32.9)
-    print(f"saatiin {saatiin}")
-    print(f"Mehuvarasto: {mehua}")
-
-    if mehua:
-        if len(mehua)>2:
-            if len(mehua) < 0:
-                print("minärikonkoodia")
-
-from varasto import Varasto
-
-
-def main():
-    mehua = Varasto(100.0)
-    olutta = Varasto(100.0, 20.2)
-
-    print("Luonnin jälkeen:")
-    print(f"Mehuvarasto: {mehua}")
-    print(f"Olutvarasto: {olutta}")
-
-    print("Olut getterit:")
-    print(f"saldo = {olutta.saldo}")
-    print(f"tilavuus = {olutta.tilavuus}")
-    print(f"PALJONKOMAHTUU = {olutta.PALJONKOMAHTUU()}")
-
-    print("Mehu setterit:")
-    print("Lisätään 50.7")
-    mehua.lisaa_varastoon(50.7)
-    print(f"Mehuvarasto: {mehua}")
-    print("Otetaan 3.14")
-    mehua.ota_varastosta(3.14)
-    print(f"Mehuvarasto: {mehua}")
-
-    print("Virhetilanteita:")
-    print("Varasto(-100.0);")
-    huono = Varasto(-100.0)
-    print(huono)
-
-    print("Varasto(100.0, -50.7)")
-    huono = Varasto(100.0, -50.7)
-    print(huono)
-
-    print(f"Olutvarasto: {olutta}")
-    print("olutta.lisaa_varastoon(1000.0)")
-    olutta.lisaa_varastoon(1000.0)
-    print(f"Olutvarasto: {olutta}")
-
-    print(f"Mehuvarasto: {mehua}")
-    print("mehua.lisaa_varastoon(-666.0)")
-    mehua.lisaa_varastoon(-666.0)
-    print(f"Mehuvarasto: {mehua}")
-
-    print(f"Olutvarasto: {olutta}")
-    print("olutta.ota_varastosta(1000.0)")
-    saatiin = olutta.ota_varastosta(1000.0)
-    print(f"saatiin {saatiin}")
-    print(f"Olutvarasto: {olutta}")
-
-    print(f"Mehuvarasto: {mehua}")
-    print("mehua.otaVarastosta(-32.9)")
-    saatiin = mehua.ota_varastosta(-32.9)
-    print(f"saatiin {saatiin}")
-    print(f"Mehuvarasto: {mehua}")
-
-    if mehua:
-        if len(mehua)>2:
-            if len(mehua) < 0:
-                print("minärikonkoodia")
-
-
-if __name__ == "__main__":
-    main()
+    print(f"saatiin {saatiin}\nMehuvarasto: {mehua}")
 
 if __name__ == "__main__":
     main()
